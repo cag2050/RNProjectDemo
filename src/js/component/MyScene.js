@@ -18,7 +18,7 @@ export default class MyScene extends Component {
         super(props);
         this.state = {
             currIndex:1,
-            article:'简单的爱情故事state2222222'
+            article:["article1","article2","article3","article4"]
         }
     }
   static defaultProps = {
@@ -28,6 +28,11 @@ export default class MyScene extends Component {
     title:PropTypes.string.isRequired,
     onForward:PropTypes.func.isRequired,
     onBack:PropTypes.func.isRequired
+  }
+  componentDidMount(){
+    this.setState({
+        article:this.state.article[this.state.currIndex]
+    })
   }
   render() {
    console.log(this.state.currIndex);

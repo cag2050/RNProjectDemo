@@ -24,14 +24,11 @@ export default class RNProjectDemo extends Component {
 
                 return <MyScene
                         title ={ route.title}
-                        currIndex = {route.index}
                         onForward={()=>{
                             const nextIndex = route.index +1;
                             navigator.push({
-//                                title:'页面'+currIndex,
                                 title:'页面'+nextIndex,
-                                index:nextIndex,
-//                                article:this.state.article
+                                index:nextIndex
                             })
                         }}
                        onBack={()=>{
