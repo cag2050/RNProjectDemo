@@ -20,6 +20,9 @@ export default class RNProjectDemo extends Component {
     return (
         <Navigator
             initialRoute = {{title:'首页',index:1}}
+            configureScene = {()=>{
+                return Navigator.SceneConfigs.verticalDownSwipeJump;
+            }}
             renderScene ={(route,navigator) =>{
 
                 return <MyScene
